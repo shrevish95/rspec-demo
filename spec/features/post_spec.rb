@@ -23,10 +23,8 @@ describe 'navigate' do
   describe "create #Post" do
     it 'can create new post' do
       visit new_post_path
-
       fill_in 'post[date]', with: Date.today
       fill_in 'post[rationale]', with: "rationale content"
-
       click_on "Save"
 
       expect(page).to have_content("rationale content")
